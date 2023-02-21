@@ -14,7 +14,7 @@ namespace SimonSays
 {
     public partial class Form1 : Form
     {
-        //TODO: create a List to store the pattern. Must be accessable on other screens
+        public static List<int> patterns = new List<int>();
 
         public Form1()
         {
@@ -23,7 +23,14 @@ namespace SimonSays
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //TODO: Launch MenuScreen
+            InitializeComponent();
+            MenuScreen ms = new MenuScreen();
+
+            //center screen
+            ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2);
+
+            this.Controls.Add(ms);
+            ms.Focus();
         }
     }
 }
