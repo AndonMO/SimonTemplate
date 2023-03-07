@@ -183,7 +183,7 @@ namespace SimonSays
                 Thread.Sleep(500);
                 yellowButton.BackColor = Color.Goldenrod;
                 this.Refresh();
-                guesses++;
+                guesses++;   
             }
             else
             {
